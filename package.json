@@ -1,0 +1,25 @@
+{
+  "name": "parse-http-header",
+  "version": "0.0.1",
+  "description": "Parses parameterized HTTP header value strings into objects",
+  "main": "parse-http-header.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/danmactough/node-parse-http-header.git"
+  },
+  "keywords": [
+    "http",
+    "parse",
+    "header",
+    "headers"
+  ],
+  "author": "Dan MacTough <danmactough@gmail.com>",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/danmactough/node-parse-http-header/issues"
+  },
+  "homepage": "https://github.com/danmactough/node-parse-http-header"
+}

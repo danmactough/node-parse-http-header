@@ -3,6 +3,19 @@ node-parse-http-header
 
 Parses parameterized HTTP header value string into an object
 
+Usage
+-----
+
+```js
+// Given the HTTP header
+// Content-Type: text/html; charset=UTF-8
+var parseHttpHeader = require('parse-http-header');
+var contentType = parseHttpHeader(response.headers['content-type'])[0];
+// text/html
+var charset = parseHttpHeader(response.headers['content-type'])['charset'];
+// UTF-8
+```
+
 - - -
 
 ### Developed by [TerraEclipse](https://github.com/TerraEclipse)

@@ -4,29 +4,39 @@ var debug  = require('debug')('test');
 
 describe('parse-http-header', function() {
 
-  it('should return empty when I parse an empty string', function() {
-    var params = parser('');
-    //assert.equal(params.length, 1);
-    assert.equal(params[0], '');
+  it('should parse header with parameters', function () {
+    var param = parser('application/json; charset=utf8');
+    debug(param);
+    assert.deepEqual(Object.keys(param), [ '0', '1', 'charset']);
+    assert.equal(param.toArray().length, 2);
+    assert.equal(param[0], 'application/json');
+    assert.deepEqual(param[1], { charset: 'utf8' });
+    assert.equal(param['charset'], 'utf8');
   });
 
-  it('should return type when I parse a type', function() {
-    var params = parser('application/json');
-    //assert.equal(params.length, 1);
-    assert.equal(params[0], 'application/json');
+  it('should parse header with dangling separator and missing parameters', function() {
+    var param = parser('application/json;');
+    debug(param);
+    assert.deepEqual(Object.keys(param), [ '0' ]);
+    assert.equal(param.toArray().length, 1);
+    assert.equal(param[0], 'application/json');
   });
 
-  it('should return type when I parse a type and separator', function() {
-    var params = parser('application/json;');
-    //assert.equal(params.length, 1);
-    assert.equal(params[0], 'application/json');
+  it('should parse header without parameters', function() {
+    var param = parser('application/json');
+    debug(param);
+    assert.deepEqual(Object.keys(param), [ '0' ]);
+    assert.equal(param.toArray().length, 1);
+    assert.equal(param[0], 'application/json');
   });
 
-  it('should return type and param when I parse a type and param', function() {
-    var params = parser('application/json; charset=utf8');
-    //assert.equal(params.length, 2);
-    assert.equal(params[0], 'application/json');
-    assert.equal(params['charset'], 'utf8');
+
+  it('should return empty string when passed an empty string', function() {
+    var param = parser('');
+    debug(param);
+    assert.deepEqual(Object.keys(param), [ '0' ]);
+    assert.equal(param.toArray().length, 1);
+    assert.equal(param[0], '');
   });
 
 });

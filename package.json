@@ -4,7 +4,7 @@
   "description": "Parses parameterized HTTP header value strings into objects",
   "main": "parse-http-header.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -23,9 +23,7 @@
   },
   "homepage": "https://github.com/danmactough/node-parse-http-header",
   "devDependencies": {
+    "debug": "~2.1.1",
     "mocha": "^2.1.0"
-  },
-  "scripts": {
-  	"test": "./node_modules/mocha/bin/mocha"	
   }
 }

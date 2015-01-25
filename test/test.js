@@ -1,5 +1,6 @@
 var parser = require('..');
 var assert = require('assert');
+var debug  = require('debug')('test');
 
 describe('parse-http-header', function() {
 

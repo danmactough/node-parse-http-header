@@ -3,6 +3,13 @@ node-parse-http-header
 
 Parses parameterized HTTP header value string into an object
 
+Installation
+-----
+
+```
+npm install --save parse-http-header
+```
+
 Usage
 -----
 

@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/danmactough/node-parse-http-header/issues"
   },
-  "homepage": "https://github.com/danmactough/node-parse-http-header"
+  "homepage": "https://github.com/danmactough/node-parse-http-header",
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  },
+  "scripts": {
+  	"test": "./node_modules/mocha/bin/mocha"	
+  }
 }

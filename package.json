@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/danmactough/node-parse-http-header",
   "devDependencies": {
-    "debug": "~2.1.1",
-    "mocha": "^2.1.0"
+    "debug": "~2.5.2",
+    "mocha": "^3.2.0"
   }
 }

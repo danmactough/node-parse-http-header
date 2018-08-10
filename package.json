@@ -1,6 +1,6 @@
 {
   "name": "parse-http-header",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parses parameterized HTTP header value strings into objects",
   "main": "parse-http-header.js",
   "scripts": {

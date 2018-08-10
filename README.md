@@ -1,6 +1,8 @@
 node-parse-http-header
 ======================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/danmactough/node-parse-http-header.svg)](https://greenkeeper.io/)
+
 Parses parameterized HTTP header value string into an object
 
 Installation
